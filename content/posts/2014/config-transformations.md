@@ -2,6 +2,7 @@
 title: "Config transforms"
 description: "Making config transformations terse."
 date: 2014-03-11
+tags: ["XDT"]
 ---
 
 Today i have merged a branch with the same exact change in 5 config transforms. This could have been avoided if the proper transform approach had been used. Here's an example of how you can cleanup a sloppy config transform:

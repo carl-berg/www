@@ -2,7 +2,7 @@
 title: "Cruelty to code"
 description: "When digging through your old code you always find a few gems (atrocities)."
 date: 2013-06-10
-tags: ["C#"]
+tags: ["CSharp"]
 ---
 When digging through old code its only a matter of time before you find something nasty. Today i found this gem:
 ```cs

@@ -2,7 +2,7 @@
 title: "Anonymous objects as key-value list"
 description: "Using anonymous objects as key-value pair lists"
 date: 2012-05-22
-tags: ["C#"]
+tags: ["CSharp"]
 ---
 
 ![Anonymous object](/img/man-with-paper-bag-on-head.jpg)

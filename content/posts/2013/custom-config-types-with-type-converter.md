@@ -2,7 +2,7 @@
 title: "Using custom types in config sections by specifying a TypeConverter"
 description: "Using typeconverter to map config parameters to types"
 date: 2013-12-20
-tags: ["C#"]
+tags: ["CSharp"]
 ---
 
 I just found something neat that i decided to to a quick writeup about.
