@@ -1,0 +1,3 @@
+[submodule "themes/clean"]
+	path = themes/clean
+	url = https://github.com/carl-berg/startbootstrap-clean-blog

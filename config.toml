@@ -1,0 +1,39 @@
+baseURL = "http://example.org/"
+languageCode = "en-us"
+title = "Carl Berg"
+theme = "clean"
+defaultContentLanguage = "en-us"
+enableEmoji = true
+
+[params]
+  DateForm = "Mon, Jan 2, 2006"
+  Description = "I am a systems developer working in Gothenburg, Sweden. This is my technology playground to test out new things I'm interested in."
+  Author = "Carl Berg"
+  email = "carl@carl-berg.se"
+
+[permalinks]
+  posts = "/post/:filename/"  
+
+[[params.social]]
+  title = "github"
+  url = "https://github.com/carl-berg"
+[[params.social]]
+  title = "linkedin"
+  url = "https://www.linkedin.com/in/cebe79/"
+[[params.social]]
+  title = "twitter"
+  url = "https://twitter.com/carl_berg" 
+
+[[menu.main]]
+  name = "home"
+  url = "/"
+  weight = -200
+[[menu.main]]
+  name = "Archives"
+  url = "/posts/"
+  weight = -180
+[[menu.main]]
+  name = "About me"
+  url = "/about/"
+  weight = -180
+
