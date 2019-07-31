@@ -22,7 +22,10 @@ enableEmoji = true
   url = "https://www.linkedin.com/in/cebe79/"
 [[params.social]]
   title = "twitter"
-  url = "https://twitter.com/carl_berg" 
+  url = "https://twitter.com/carl_berg"
+[[params.social]]
+  title = "rss"
+  url = "http://feeds.feedburner.com/carl-berg" 
 
 [[menu.main]]
   name = "home"
