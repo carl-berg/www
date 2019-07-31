@@ -1,0 +1,5 @@
+# Run with
+# hugo serve --config config.toml,config.dev.toml
+
+theme = "startbootstrap-clean-blog"
+themesDir = "../"
