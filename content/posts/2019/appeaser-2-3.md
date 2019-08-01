@@ -34,4 +34,4 @@ public static IServiceCollection RegisterValidation(this IServiceCollection serv
 ... where an extension (that could be shared in a nuget package for instance) configures one or more options but doesn't need direct access to the `AddAppeaser(..)` or `AddMvc(..)` methods, also the order these configurations are invoked doesn't matter as creation of these options happen at a later stage.
 
 ## Resources
-- [Release notes](https://github.com/carl-berg/appeaser/releases/tag/2.3.0)
+- [Release notes](https://github.com/carl-berg/appeaser/releases/tag/microsoft-dependency-injection-1.1.0)
