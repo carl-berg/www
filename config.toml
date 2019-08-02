@@ -4,12 +4,15 @@ title = "Carl Berg"
 theme = "clean"
 defaultContentLanguage = "en-us"
 enableEmoji = true
+pygmentsCodeFences = true
+pygmentsUseClasses = true
 
 [params]
   DateForm = "Mon, Jan 2, 2006"
   Description = "I am a systems developer working in Gothenburg, Sweden. This is my technology playground to test out new things I'm interested in."
   Author = "Carl Berg"
   email = "carl@carl-berg.se"
+  customCss = ["/css/syntax-vs.css"]
 
 [permalinks]
   posts = "/post/:filename/"  
