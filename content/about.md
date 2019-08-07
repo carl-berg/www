@@ -14,6 +14,7 @@ I am an early adopter of new technologies, I am passionate about clean code and 
 I also work on and contribute to open source projects like:
 
 - [Appeaser](https://github.com/carl-berg/appeaser)
+- [ATypeScanner](https://github.com/carl-berg/atypescanner)
 - [Spinit library](https://github.com/Spinit-AB/Spinit)
 - [Web anchor](https://github.com/mattiasnordqvist/Web-Anchor)
 - [Captain data](https://github.com/mattiasnordqvist/Captain-Data)
