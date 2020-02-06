@@ -1,14 +1,15 @@
 ---
 title: "Kicking the tires of Micronetes"
 description: "A mini kubernetes inspired orchestrator for running microservices"
-date: 2020-01-31
-tags: ["Micronetes", "Kubernetes", "Dotnet", "Microservices"]
-draft: true
+date: 2020-02-06
+tags: ["Micronetes", "m8s", "Kubernetes", "Dotnet", "Microservices"]
 ---
 
 ## Why Micronetes (m8s)?
 
-Recently in working with microservices I have found that there's a bit of overhead in testing out features that span several services. You might start something off in the UI which might cause actions to ripple through several services and it can get tedious to startup everything you need to test the whole flow. Docker might be a bit heavy, especially when you're also running dotnet full-framework services. This is where Micronetes can potentially shine.
+![](/img/micronetes-logo.svg)
+
+My reason for trying micronetes is trying to resolve some of the friction caused by testing out features that span multiple services. You might start something off in the UI which might cause actions to ripple through several services and it can get tedious to startup everything you need to test the whole flow. Docker might be a bit cumbersome, especially when you have dotnet framework services you want to run. This is where Micronetes can potentially shine.
 
 `Disclaimer, Micronetes is currently in alpha so things might change...`
 
@@ -53,25 +54,27 @@ I've been trying out m8s on a client project that's been around for a few years 
 
 Some things to note about the configuration above. m8s is currently optimized for dotnet core and will automatically build your project and can pick up ports for `launchSettings.json` automatically. Other types of project you can run there's not build support out of the box.
 
-One gotcha i ran into here was that we are using a private nuget feed in Azure Devops which prevents `dotnet restore` from being run successfully (credentials are needed). Luckily i found [Azure artifacts credentials provider](#setting-up-credentials-for-azure-devops-artifacts) that will help you set up nuget credentials for Azure Devops Artifacts.
+A nice feature is [Service Descriptions](https://github.com/davidfowl/Micronetes#service-descriptions), which means that configurations will be available (through environment variables and as `IConfiguration` keys) to all services/applications in the "cluster". So for instance, a port for a web-api can be exposed to another service.
+
+There's also support for running docker containers from m8s, but I haven't yet tried that.
 
 ## Time to run your m8s "cluster"
 
 This is the easiest part. Just run `m8s run my-services.yaml`, or whatever you named your yaml configuration file.
-When you cluster starts you will get a dashboard url show up in the logs. Here you can monitor your services and also view their logs.
+When you cluster starts a dashboard url show up in the logs. Here you can monitor your services and also view their logs.
 
-TODO: Replace image
-![](https://user-images.githubusercontent.com/95136/72794899-95868680-3bf1-11ea-8625-fcb31218570b.png)
+![](/img/micronetes-dashboard.png)
 
 ## Customization
 
-TODO: Ports, Instances etc
+There are a few customizations you can do, like specifying how many instances of a service you want to run, which port you want the dashboard to run on for example. Check out the [documentation on github](https://github.com/davidfowl/Micronetes#micronetes-cli).
 
 ## Setting up credentials for azure devops artifacts
 
-TODO
+A problem i ran into right aways was that some projects referenced nuget packages from an Azure Devops artifact feed, which require credentials. Therefore i could not just simply run `dotnet restore` for those projects. After some googling I found _Azure artifacts credential provider_ (link below) that will prompt a link and a code for verification the first time. After that credentials will be cached and no prompt required. Not sure for how long, but im sure i will find out :smile:.
 
 ## Resources
 
 -   [Micronetes](https://github.com/davidfowl/Micronetes)
 -   [Azure artifacts credential provider](https://github.com/microsoft/artifacts-credprovider)
+-   [Image credits: _all images have been borrowed from the github repo_](https://github.com/davidfowl/Micronetes)
